@@ -1,0 +1,32 @@
+<form #recipeForm="ngForm" (ngSubmit)="onFormSubmit(recipeForm)">
+    <div class="form-group">
+        <label>Recipe name</label>
+        <input class="form-control"
+               type="text"
+               ngModel
+               required
+               name="name">
+        
+        <br>
+
+        <label>Picture</label>
+        <input class="form-control" 
+               type="text"
+               ngModel 
+               name="picture">
+        
+        <br>
+
+        <label>Description</label>
+        <input class="form-control" 
+               type="text"
+               ngModel 
+               name="description">
+        
+        <br>
+        
+        <button>SUBMIT</button>
+        <button type="button" (click)="resetRecipeForm(recipeForm)">RESET</button>
+        <button routerLink="/recipes">BACK</button>
+    </div>
+</form>
